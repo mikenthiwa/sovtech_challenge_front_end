@@ -1,9 +1,9 @@
-import React, { useEffect, Component} from 'react';
+import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import {connect} from 'react-redux';
 import {GET_CATEGORIES} from "../../queries";
 import {updateCategory} from "../../redux/action/jokesAction";
-
+import Loader from 'react-loader-spinner';
 import './categories.scss';
 
 class Categories extends Component {
@@ -12,7 +12,7 @@ class Categories extends Component {
         return (
             <Query query={GET_CATEGORIES}>
                 {( {loading, error, data}) => {
-                    if(loading){return <div className='loader'>Loading...</div>}
+                    if(loading){return <div className='loader'><Loader type="BallTriangle" /></div>}
                     if(error){ return <div>Error</div>}
                     const { categories } = data;
                     return categories.map((category, index) => {

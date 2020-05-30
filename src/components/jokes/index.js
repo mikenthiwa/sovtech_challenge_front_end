@@ -4,12 +4,13 @@ import { Query } from 'react-apollo'
 import {GET_JOKE} from "../../queries";
 import ApolloClient from 'apollo-boost';
 import {updateCategory} from "../../redux/action/jokesAction";
+import Loader from 'react-loader-spinner';
 import gql from 'graphql-tag';
 import './jokes.scss'
 
 
 const client = new ApolloClient({
-    uri: 'http://localhost:5000/graphql',
+    uri: 'https://sovtech-challenge.herokuapp.com/graphql',
 });
 
 class Joke extends Component {
@@ -33,7 +34,7 @@ class Joke extends Component {
             <Fragment>
                 <Query query={GET_JOKE} variables={{category}}>
                     {({loading, error, data}) => {
-                        if(loading){return <div className='loader'>Loading...</div>}
+                        if(loading){return <div className='loader'><Loader type="BallTriangle" /></div>}
                         if(error){ return <div>Error</div>}
                         const {joke: {value}} = data;
                         return <div className="joke">{value}</div>

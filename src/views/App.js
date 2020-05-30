@@ -1,16 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import jokeReducer from "../redux/reducers/jokeReducer";
 import Categories from '../components/categories';
 import Joke from '../components/jokes'
 import './App.css';
 
 class App extends Component {
-    state = {
-        category: ''
-    }
-
-
 
     render() {
         return (
