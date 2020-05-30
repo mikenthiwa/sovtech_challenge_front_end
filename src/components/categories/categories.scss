@@ -1,0 +1,30 @@
+.categories-sect {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 10px 2px #d3d3d3;
+  padding: 10px 20px;
+  width: 400px;
+  border-radius: 5px;
+  height: 200px;
+
+  .loader {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .category {
+    padding: 5px 10px;
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+
+    &:hover {
+      background: blue;
+      color: white;
+    }
+  }
+
+}

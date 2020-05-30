@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
+import jokeReducer from "./jokeReducer";
 
 export default combineReducers({
-    // reducers will be added here
-    "testReducer": () => null
+    jokeReducer,
 });

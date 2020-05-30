@@ -1,0 +1,19 @@
+.jokes-cont {
+  width: 500px;
+  margin-left: 30px;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 1px 1px 10px 2px #d3d3d3;
+  padding: 10px;
+
+  .joke {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+  }
+  .loader {
+    margin: auto;
+  }
+}

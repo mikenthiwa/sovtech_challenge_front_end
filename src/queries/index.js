@@ -1,5 +1,20 @@
-import ApolloClient from 'apollo-boost';
+import gql from 'graphql-tag'
 
-const client = new ApolloClient({
-    uri: 'https://localhost:5000/graphql',
-});
+const GET_CATEGORIES = gql`
+  query CategoryQuery { categories }
+`;
+
+const GET_JOKE = gql`
+  query Joke($category: String!){
+    joke(category: $category) {
+      id,
+      value,
+      categories
+    }
+  }
+`;
+
+export {
+    GET_CATEGORIES,
+    GET_JOKE
+};

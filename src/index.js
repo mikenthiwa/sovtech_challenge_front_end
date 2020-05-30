@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import {Provider} from 'react-redux';
@@ -8,8 +10,12 @@ import './index.css';
 import Routes from './routes'
 import * as serviceWorker from './serviceWorker';
 
+
+const cache = new InMemoryCache();
+const httpLink = new HttpLink({ uri: 'https://chuck-norris-api123.herokuapp.com/graphql' });
+
 const client = new ApolloClient({
-    uri: 'https://localhost:5000/graphql',
+    uri: 'http://localhost:5000/graphql',
 });
 
 
