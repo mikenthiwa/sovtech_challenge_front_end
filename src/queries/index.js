@@ -1,7 +1,8 @@
-import gql from 'graphql-tag'
+import { gql } from 'apollo-boost';
+// import gql from 'graphql-tag'
 
-const GET_CATEGORIES = gql`
-  query CategoryQuery { categories }
+const jokesCategories = gql`
+    { categories }
 `;
 
 const GET_JOKE = gql`
@@ -15,6 +16,6 @@ const GET_JOKE = gql`
 `;
 
 export {
-    GET_CATEGORIES,
+    jokesCategories,
     GET_JOKE
 };
