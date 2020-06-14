@@ -13,6 +13,12 @@
     text-align: center;
 }
 
+.loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
 .section-B {
     display: flex;
     flex-direction: row;
@@ -20,4 +26,15 @@
     justify-content: center;
     height: 100%;
     align-items: center;
+}
+
+.jokes-sect {
+    box-shadow: 1px 1px 10px 2px #d3d3d3;
+    width: 500px;
+    margin-left: 30px;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
 }

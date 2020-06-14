@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import {Provider} from 'react-redux';
-import store from './redux/store'
+import store from './redux/store';
+import dotenv from 'dotenv';
 import './index.css';
 import Routes from './routes'
 import * as serviceWorker from './serviceWorker';
 
-
+dotenv.config();
 const client = new ApolloClient({
-    uri: 'https://sovtech-challenge.herokuapp.com/graphql',
+    uri: process.env.REACT_APP_BACK_END_URL,
 });
 
 
